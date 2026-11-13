@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRGNDY Craft — Nouveau site en préparation</title>
+  <meta name="description" content="BRGNDY Craft prépare son nouveau site. Restez informé de la réouverture.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236b1d2a'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%23f4ede4' font-family='Georgia'>B</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bordeaux: #6b1d2a;
+      --bordeaux-dark: #4a1320;
+      --creme: #f4ede4;
+      --or: #c9a46a;
+      --texte: #2b1a1d;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(ellipse at top, var(--bordeaux) 0%, var(--bordeaux-dark) 70%);
+      color: var(--creme);
+      font-family: 'Inter', system-ui, sans-serif;
+      padding: 2rem 1.25rem;
+      text-align: center;
+    }
+    main { max-width: 560px; width: 100%; }
+    .logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.6rem, 9vw, 4rem);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      line-height: 1;
+    }
+    .logo span { color: var(--or); }
+    .separateur {
+      width: 60px; height: 1px;
+      background: var(--or);
+      margin: 1.75rem auto;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      margin-bottom: 1rem;
+    }
+    p.intro {
+      font-size: 1rem;
+      line-height: 1.7;
+      opacity: 0.85;
+      margin-bottom: 2.25rem;
+    }
+    form {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    input[type="email"] {
+      flex: 1 1 240px;
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(244, 237, 228, 0.35);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--creme);
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+    input[type="email"]::placeholder { color: rgba(244, 237, 228, 0.55); }
+    input[type="email"]:focus { outline: none; border-color: var(--or); }
+    button {
+      padding: 0.9rem 1.5rem;
+      background: var(--or);
+      color: var(--texte);
+      border: none;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      font-family: inherit;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    button:hover { opacity: 0.85; }
+    .hidden { display: none; }
+    .contact {
+      margin-top: 2.5rem;
+      font-size: 0.9rem;
+      opacity: 0.75;
+    }
+    .contact a { color: var(--or); text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      opacity: 0.5;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo">BRGNDY<span>·</span>CRAFT</div>
+    <div class="separateur"></div>
+
+    <h1>Notre nouveau site arrive bientôt</h1>
+    <p class="intro">
+      Nous préparons une nouvelle version de BRGNDY Craft.<br>
+      Écrivez-nous pour être prévenu dès la réouverture.
+    </p>
+
+    <form action="mailto:brgndycraft@gmail.com" method="GET">
+      <input type="hidden" name="subject" value="Prévenez-moi de la réouverture de BRGNDY Craft">
+      <button type="submit">Me prévenir de la réouverture</button>
+    </form>
+
+    <p class="contact">
+      Une question ? <a href="mailto:brgndycraft@gmail.com">brgndycraft@gmail.com</a>
+    </p>
+  </main>
+
+  <footer>© <span id="annee">2026</span> BRGNDY Craft · Bourgogne, France</footer>
+
+  <script>document.getElementById('annee').textContent = new Date().getFullYear();</script>
+</body>
+</html>
